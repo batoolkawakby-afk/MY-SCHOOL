@@ -18,7 +18,7 @@ return new class extends Migration
             $table->date('dateOfBirth');
             $table->string('mobile')->unique();
             $table->string('class_id');
-            $table->string('division'); 
+            $table->integer('division'); 
             $table->string('password');
             $table->string('personalPhoto')->nullable();
             $table->timestamps();

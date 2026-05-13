@@ -20,7 +20,7 @@ class TeacherController extends Controller
             'personalPhoto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'subject_id' => 'required|exists:subjects,id',
             'class_id'   => 'required|exists:classes,id',
-            'division'   => 'required|string|max:100',
+            'division'   => 'required|integer|between:1,5',
             'mobile'  => 'required|string|unique:users,mobile',
             'password' => 'required|string|min:8|confirmed',
         ]);

@@ -19,7 +19,7 @@ class StudentController extends Controller
             'dateOfBirth' => 'required|date_format:d-m-Y',
             'personalPhoto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'class_id' => 'required|exists:classes,id',
-            'division' => 'required|string|max:100',
+            'division' => 'required|integer|between:1,5',
             'mobile' => 'required|string|max:10|unique:students,mobile',
             'password' => 'required|string|min:8|confirmed',
         ]);

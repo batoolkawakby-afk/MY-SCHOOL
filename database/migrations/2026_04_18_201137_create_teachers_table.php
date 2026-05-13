@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->date('dateOfBirth');
-            $table->string('personalPhoto')->nullable();
+            $table->integer('personalPhoto')->nullable();
             $table->enum('gender', ['male', 'female']);
 
             // 🔥 العلاقات الصح
